@@ -109,7 +109,7 @@ table tr td {
     display:none;
 }
 .konten3 .container {
-    padding: 0rem 3rem 0rem 3.2rem;
+    padding: 0rem 3rem 0rem 3rem;
 }
 .konten3 h2 {
     margin-top:46%;
@@ -215,9 +215,6 @@ hr {
     }
     .mobile {
         display:block;
-    }
-    .konten3 .container {
-        padding: 0rem 1.8rem 0rem 2rem;
     }
     .konten3 h2 {
         margin-top:15%;
