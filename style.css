@@ -222,21 +222,6 @@ hr {
         left: 30px;
         right: inherit;
     }
-    .desktop {
-        display:none;
-    }
-    .mobile {
-        display:block;
-    }
-    .konten3 h2 {
-        margin-top:15%;
-    }
-    .award {
-        border-radius: 0rem 0rem 1rem 1rem;
-    }
-    .awex {
-        border-radius: 1rem 1rem 0rem 0rem;
-    }
     .page-footer{
         width:100%; background-color:white; padding:2.4rem;
     }
