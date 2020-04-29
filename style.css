@@ -91,51 +91,43 @@ table tr td {
     padding:15px;
 }
 .box {
-    width:100%; background-color:rgb(230, 230, 230); border-radius:5px !important;
+    width:100%; background-color:rgb(230, 230, 230); border-radius:.5rem !important;
 }
 .skill {
-    color:white; margin-bottom:20px; border-radius:5px;
+    color:white; margin-bottom:1rem; border-radius:5px;
 }
 .ket {
-    width:20rem; background:rgba(0, 0, 0, 0.3); padding-left:10px; padding-top:6px; padding-bottom:6px; border-radius:5px 0px 0px; font-size:1.6rem; font-family: 'GothamRoundedLight'; letter-spacing:.05rem;
+    width:20rem; background:rgba(0, 0, 0, 0.3); padding-left:1rem; padding-top:.6rem; padding-bottom:.6rem; border-radius:5px 0px 0px 5px; font-size:1.6rem; font-family: 'GothamRoundedLight'; letter-spacing:.05rem;
 }
-.html {width: 95%; background-color: #e96815;}
-.css {width: 95%; background-color: #0764af;}
+.html {width: 90%; background-color: #e96815;}
 .php {width: 75%; background-color: #6482dd;}
-.js {width: 75%; background-color: #fbde1c;}
-.ci {width: 90%; background-color: #be4e06;}
-.pr {width: 90%; background-color: rgb(201, 62, 146);}
+.js {width: 70%; background-color: #fbde1c;}
+.ci {width: 85%; background-color: #be4e06;}
+.lrv {width: 70%; background-color: #d12b2b;}
+.pr {width: 85%; background-color: rgb(201, 62, 146);}
 .ps {width: 80%; background-color: rgb(14, 157, 210);}
-.ae {width: 75%; background-color: rgb(134, 29, 93);}
+.ae {width: 70%; background-color: rgb(134, 29, 93);}
 
-.mobile {
-    display:none;
-}
-.konten3 .container {
-    padding: 0rem 3rem 0rem 3rem;
-}
-.konten3 h2 {
-    margin-top:46%;
-}
 .award {
-    padding:2rem; background-image:linear-gradient(to bottom right, rgb(100,128,186), rgb(116, 141, 192)); border-radius: 1rem 0rem 0rem 1rem;
+    padding:3rem; background-image:linear-gradient(to bottom right, rgb(100,128,186), rgb(116, 141, 192)); border-radius:1rem;
+}
+.award h2 {
+    color:white;
 }
 .award ul li {
-    font-size:1.6rem; font-family: 'GothamRoundedLight'; color:white; letter-spacing:.05rem;
+    font-size:1.6rem; font-family:'GothamRoundedLight'; color:white; letter-spacing:.05rem;
 }
-.awex {
-    background-color:rgb(240,240,240); border-radius: 0rem 1rem 1rem 0rem;
-}
-.card {
+
+.konten4 .card {
     border-radius: 1rem; margin-bottom:3.5rem; transition:.2s all;
 }
-.card:hover {
+.konten4 .card:hover {
     box-shadow:.5rem .5rem 1rem rgb(200,200,200); border:1px solid transparent; transition:.2s all;
 }
 .card-img-top {
     border-radius: 1rem 1rem 0rem 0rem;
 }
-.card h4 {
+.konten4 .card h4 {
     color:rgb(18,18,18);
 }
 
@@ -184,21 +176,6 @@ hr {
     }
     .konten1 .clm {
         display:none;
-    }
-    .desktop {
-        display:none;
-    }
-    .mobile {
-        display:block;
-    }
-    .konten3 h2 {
-        margin-top:5%;
-    }
-    .award {
-        border-radius: 0rem 0rem 1rem 1rem;
-    }
-    .awex {
-        border-radius: 1rem 1rem 0rem 0rem;
     }
 }
 @media screen and (max-width: 767px) {
