@@ -97,7 +97,7 @@ table tr td {
     color:white; margin-bottom:1rem; border-radius:5px;
 }
 .ket {
-    width:20rem; background:transparent; padding-left:1rem; padding-top:.6rem; padding-bottom:.6rem; border-radius:5px 0px 0px 5px;
+    padding-left:1rem; padding-top:.6rem; padding-bottom:.6rem; border-radius:5px 0px 0px 5px;
 }
 .html {width: 90%; background-color: #e96815;}
 .php {width: 75%; background-color: #6482dd;}
