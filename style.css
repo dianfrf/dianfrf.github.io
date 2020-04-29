@@ -97,7 +97,7 @@ table tr td {
     color:white; margin-bottom:1rem; border-radius:5px;
 }
 .ket {
-    width:20rem; background:rgba(0, 0, 0, 0.3); padding-left:1rem; padding-top:.6rem; padding-bottom:.6rem; border-radius:5px 0px 0px 5px; font-size:1.6rem; font-family: 'GothamRoundedLight'; letter-spacing:.05rem;
+    width:20rem; background:transparent; padding-left:1rem; padding-top:.6rem; padding-bottom:.6rem; border-radius:5px 0px 0px 5px;
 }
 .html {width: 90%; background-color: #e96815;}
 .php {width: 75%; background-color: #6482dd;}
@@ -115,20 +115,26 @@ table tr td {
     color:white;
 }
 .award ul li {
-    font-size:1.6rem; font-family:'GothamRoundedLight'; color:white; letter-spacing:.05rem;
+    font-size:1.6rem; font-family:'GothamRoundedLight'; color:white; letter-spacing:.05rem; margin-left:-2rem;
 }
 
 .konten4 .card {
     border-radius: 1rem; margin-bottom:3.5rem; transition:.2s all;
 }
 .konten4 .card:hover {
-    box-shadow:.5rem .5rem 1rem rgb(200,200,200); border:1px solid transparent; transition:.2s all;
+    box-shadow:.5rem .5rem 1.5rem rgb(235,235,235); border:1px solid transparent; transition:.2s all;
 }
 .card-img-top {
     border-radius: 1rem 1rem 0rem 0rem;
 }
+.konten4 a {
+    text-decoration:none;
+}
 .konten4 .card h4 {
-    color:rgb(18,18,18);
+    color:rgb(18,18,18); transition:.2s;
+}
+.konten4 .card h4:hover {
+    color:rgb(100,128,186); transition:.2s;
 }
 
 .page-footer{
