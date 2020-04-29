@@ -109,7 +109,7 @@ table tr td {
 .ae {width: 70%; background-color: rgb(134, 29, 93);}
 
 .award {
-    padding:3rem; background-image:linear-gradient(to bottom right, rgb(100,128,186), rgb(116, 141, 192)); border-radius:1rem;
+    padding:3rem; background-image:linear-gradient(to bottom right, rgb(100,128,186), rgb(116, 141, 192)); border-radius:1rem; border:none;
 }
 .award h2 {
     color:white;
