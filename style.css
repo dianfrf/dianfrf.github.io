@@ -104,9 +104,9 @@ table tr td {
 .js {width: 70%; background-color: #fbde1c;}
 .ci {width: 85%; background-color: #be4e06;}
 .lrv {width: 70%; background-color: #f05340;}
-.pr {width: 85%; background-color: rgb(201, 62, 146);}
-.ps {width: 80%; background-color: rgb(14, 157, 210);}
-.ae {width: 70%; background-color: rgb(134, 29, 93);}
+.pr {width: 85%; background-color: #c93e92;}
+.ps {width: 80%; background-color: #0e9dd2;}
+.ae {width: 70%; background-color: #861d5d;}
 
 .award {
     padding:3rem; background-image:linear-gradient(to bottom right, rgb(100,128,186), rgb(116, 141, 192)); border-radius:1rem; border:none;
