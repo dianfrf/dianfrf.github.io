@@ -10,18 +10,44 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/lazysizes.min.js"></script>
+        <script src="js/scrollreveal.min.js"></script>
         <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
     </head>
-    <body data-spy="scroll" data-target=".topnav" data-offset="10" oncontextmenu='return false' onselectstart='return false'>
+    <body>
         <button id="btntop" title="Go to top"><i class="fas fa-chevron-up fa-lg"></i></button>
 
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <button class="toggler" type="button" onclick="shownav()" id="btnnav">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>			
+                </button>
+                <button class="toggler2" type="button" onclick="closenav()" id="btnnav2">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>			
+                </button>
+                <div class="collapse navbar-collapse" id="navcollapse">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
+                        <li><a class="nav-link" href="#home">Home</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="nav-link" href="#education">Education</a></li>
+                        <li><a class="nav-link" href="#experience">Experience</a></li>
+                        <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li><a class="nav-link" href="#getin">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
         <section id="home">
             <div class="jumbotron header">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <h1><strong>DIAN </strong>FAKHRUL ARIF</h1>
-                            <h3>WEB DEVELOPER</h3>
+                            <h3>WEBSITE DEVELOPER</h3>
                             <hr>
                             <a href="https://api.whatsapp.com/send?phone=085155397766&text=Hallo" target="_blank"><img src="img/wa.png" class="kontak lazyload" title="WhatsApp"></a>
                             <a href="mailto:arifdian56@gmail.com?Subject=Hello%20Dian" target="_top"><img src="img/email.png" class="kontak lazyload" title="Email"></a>
@@ -73,7 +99,7 @@
                             </table>
                             <br>
                             <a href="img/CV.pdf" download="Curriculum Vitae" target="_blank">
-                                <button class="btn">Open CV</button>
+                                <button class="btn">Download CV</button>
                             </a>
                         </div>
                     </div>
@@ -242,19 +268,64 @@
                 </div>
             </div>
         </section>
+
+        <section id="getin">
+            <div class="jumbotron konten5">
+                <div class="container">
+                    <h2>GET IN TOUCH</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="name"><h5>Name</h5></label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="Enter your name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label for="email"><h5>Email</h5></label>
+                                    <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="message"><h5>Message</h5></label>
+                                    <textarea class="form-control form-control-lg" rows="12" placeholder="Enter your message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <center><button type="submit" class="btnsubmit">Submit</button></center>
+                      </form>
+                </div>
+            </div>
+        </section>
         <div class="page-footer">
-            <h5>Copyright &copy; 2020 <strong style="font-weight:bolder">Dian Fakhrul Arif</strong>. All rights reserved.</h5>
+            <h5>Copyright &copy; 2020 Dian Fakhrul Arif. All rights reserved.</h5>
         </div>
         <script>
+            var mynav = document.getElementById("navcollapse");
+            var mybtn = document.getElementById("btnnav");
+            var mybtn2 = document.getElementById("btnnav2");
+            function shownav() {
+                mynav.style.display = "block";
+                mybtn.style.display = "none";
+                mybtn2.style.display = "block";
+            }
+            function closenav() {
+                mynav.style.display = "none";
+                mybtn.style.display = "block";
+                mybtn2.style.display = "none";
+            }
+
             $(function(){
-                var navigasi = $('.topnav').offset().top;
+                var navigasi = $('.navbar').offset().top;
                 var sticky  = function(){
                     var srolltop = $(window).scrollTop();
                     if(srolltop > navigasi) {
-                        $('.topnav').addClass('fixed');
+                        $('.navbar').addClass('fixed');
                     }
                     else {
-                        $('.topnav').removeClass('fixed');
+                        $('.navbar').removeClass('fixed');
                     }
                 };
                 sticky();
@@ -263,12 +334,10 @@
                 });
             });
             
-            $(document).ready(function() {
-                $('#btntop').click(function() {
-                    $("html, body").animate({scrollTop: 0}, 300);
-                });
-            }); 
             var mybutton = document.getElementById("btntop");
+            $('#btntop').click(function() {
+                $("html, body").animate({scrollTop: 0}, 300);
+            });
             window.onscroll = function() {scrollFunction()};
             function scrollFunction() {
                 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -277,6 +346,34 @@
                     mybutton.style.display = "none";
                 }
             }
+
+            const sr = ScrollReveal({
+                origin:'top',
+                distance:'1.5rem',
+                duration:2000,
+                reset:true
+            })
+            sr.reveal('.header h1',{})
+            sr.reveal('.header h3',{delay:200})
+            sr.reveal('.profil',{delay:400})
+            sr.reveal('.header .kontak',{interval:200})
+
+            sr.reveal('.konten1 img',{})
+            sr.reveal('.konten1 p',{delay:200})
+            sr.reveal('.konten1 table',{delay:200})
+            sr.reveal('.konten1 .btn',{delay:400})
+
+            sr.reveal('.timeline li',{interval:200})
+            sr.reveal('.konten2 h5',{})
+            sr.reveal('.konten2 .box',{interval:200})
+
+            sr.reveal('.award',{})
+            sr.reveal('.award h4',{interval:400})
+            sr.reveal('.award ul',{interval:400})
+
+            sr.reveal('.konten4 .card',{interval:200})
+
+            sr.reveal('.btnsubmit',{})
         </script>
     </body>
 </html>
