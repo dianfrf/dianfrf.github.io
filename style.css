@@ -222,7 +222,7 @@ textarea {
 
 /* --FONT & TYPOGRAPHY-- */
 h1 {
-    font:normal 5rem/7.5rem 'GothamRounded'; color:rgb(18,18,18); 
+    font:normal 5rem/7.5rem 'GothamRounded'; color:rgb(18,18,18);
 }
 h2 {
     font:normal 3.2rem/4.8rem 'GothamRounded'; text-align:center; margin-bottom:3.2rem; color:rgb(100,128,186);
@@ -317,6 +317,9 @@ hr {
     }
 }
 @media screen and (max-width: 767px) {
+    .nav-link, table tr td, .award ul li, h5, p, h6 {
+        letter-spacing:.05rem !important;
+    }
     .toggler, .toggler2 {
         padding-left:1rem !important;
     }
