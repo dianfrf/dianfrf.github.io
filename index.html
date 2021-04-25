@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <title>Dian Fakhrul Arif</title>
-        <link rel="icon" type="image/png" href="img/My Logo.png">
+        <link rel="icon" type="image/png" href="img/mylogo.png">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css" type="text/css">
         <script src="js/jquery-3.2.1.min.js"></script>
@@ -13,10 +13,10 @@
         <script src="js/scrollreveal.min.js"></script>
         <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
     </head>
-    <body>
-        <button id="btntop" title="Go to top"><i class="fas fa-chevron-up fa-lg"></i></button>
+    <body data-spy="scroll" data-target="#navbarku" data-offset="1">
+        <button id="btntop" class="btntop" title="Go to top"><i class="fas fa-chevron-up fa-lg"></i></button>
 
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbarku">
             <div class="container">
                 <button class="toggler" type="button" onclick="shownav()" id="btnnav">
                     <span class="icon-bar top-bar"></span>
@@ -29,13 +29,13 @@
                     <span class="icon-bar bottom-bar"></span>			
                 </button>
                 <div class="collapse navbar-collapse" id="navcollapse">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
-                        <li><a class="nav-link" href="#home">Home</a></li>
-                        <li><a class="nav-link" href="#about">About</a></li>
-                        <li><a class="nav-link" href="#education">Education</a></li>
-                        <li><a class="nav-link" href="#experience">Experience</a></li>
-                        <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0" >
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -97,10 +97,10 @@
                                     <td>: Ds. Puton RT 01/ RW 01 Kec. Diwek Kab. Jombang 61471</td>
                                 </tr>
                             </table>
-                            <br>
-                            <a href="img/CV.pdf" download="Curriculum Vitae" target="_blank">
-                                <button class="btn">Download CV</button>
-                            </a>
+                            <br>        
+                            <button class="btndownload">
+                                <a href="img/CV.pdf" download="Curriculum Vitae" target="_blank">Download CV</a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -201,11 +201,10 @@
                             <div class="card">
                                 <img class="card-img-top lazyload" src="img/tbl.png">
                                 <div class="card-body">
-                                    <a href="http://theblacklabelofficial.000webhostapp.com/" target="_blank">
-                                        <h4 class="card-title">The Black Label-Prototype</h4>
-                                    </a>
+                                    <h4 class="card-title">
+                                        <a href="http://theblacklabelofficial.000webhostapp.com/" target="_blank">The Black Label-Prototype</a>
+                                    </h4>
                                     <p class="card-text">Website for The Black Label, South Korea's record label.</p>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -213,9 +212,9 @@
                             <div class="card">
                                 <img class="card-img-top lazyload" src="img/pantaucovid.png">
                                 <div class="card-body">
-                                    <a href="https://github.com/dianfrf/SEMESTA_Dian" target="_blank">
-                                        <h4 class="card-title">Pantau Covid-19</h4>
-                                    </a>
+                                    <h4 class="card-title">
+                                        <a href="https://github.com/dianfrf/SEMESTA_Dian" target="_blank">Pantau Covid-19</a>
+                                    </h4>
                                     <p class="card-text">Website to view data on Covid-19 cases in Indonesia.</p>
                                 </div>
                             </div>
@@ -224,9 +223,9 @@
                             <div class="card">
                                 <img class="card-img-top lazyload" src="img/ETTO.png">
                                 <div class="card-body">
-                                    <a href="https://github.com/dianfrf/ETTO-Prototype" target="_blank">
-                                        <h4 class="card-title">ETTO-Prototype</h4>
-                                    </a>
+                                    <h4 class="card-title">
+                                        <a href="https://github.com/dianfrf/ETTO-Prototype" target="_blank">ETTO-Prototype</a>
+                                    </h4>
                                     <p class="card-text">Order application for 'becak', 'delman', and bicycle.</p>
                                 </div>
                             </div>
@@ -234,10 +233,10 @@
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="card">
                                 <img class="card-img-top lazyload" src="img/PPOB.png">
-                                <div class="card-body">
-                                    <a href="https://github.com/dianfrf/PPOB_Listrik" target="_blank">
-                                        <h4 class="card-title">UKK SMK 2019</h4>
-                                    </a>
+                                <div class="card-body"> 
+                                    <h4 class="card-title">
+                                        <a href="https://github.com/dianfrf/PPOB_Listrik" target="_blank">UKK SMK 2019</a>
+                                    </h4>
                                     <p class="card-text">Payment Point Online Bank (PPOB) website for electricity.</p>
                                 </div>
                             </div>
@@ -246,9 +245,9 @@
                             <div class="card">
                                 <img class="card-img-top lazyload" src="img/LinkMasjid.png">
                                 <div class="card-body">
-                                    <a href="https://drive.google.com/drive/folders/1B0q_zq5650gL0Q-KKkIPL6zZj5m4VEAg?usp=sharing" target="_blank">
-                                        <h4 class="card-title">LinkMasjid Image Tool</h4>
-                                    </a>
+                                    <h4 class="card-title">
+                                        <a href="https://drive.google.com/drive/folders/1B0q_zq5650gL0Q-KKkIPL6zZj5m4VEAg?usp=sharing" target="_blank">LinkMasjid Image Tool</a>
+                                    </h4>
                                     <p class="card-text">Website to compress and watermarking multiple image.</p>
                                 </div>
                             </div>
@@ -257,10 +256,10 @@
                             <div class="card">
                                 <img class="card-img-top lazyload" src="img/Apotek.png">
                                 <div class="card-body">
-                                    <a href="https://github.com/dianfrf/Apotek" target="_blank">
-                                        <h4 class="card-title">Apotek</h4>
-                                    </a>
-                                    <p class="card-text">Website for manage pharmacy cashier.</p>
+                                    <h4 class="card-title">
+                                        <a href="https://github.com/dianfrf/Apotek" target="_blank">Apotek</a>
+                                    </h4>
+                                    <p class="card-text">Website for manage pharmacy cashier (manage data and cart).</p>
                                 </div>
                             </div>
                         </div>
@@ -349,19 +348,19 @@
 
             const sr = ScrollReveal({
                 origin:'top',
-                distance:'1.5rem',
+                distance:'1.8rem',
                 duration:2000,
                 reset:false
             })
-            sr.reveal('.header h1',{})
-            sr.reveal('.header h3',{delay:200})
+            sr.reveal('.header h1',{delay:200})
+            sr.reveal('.header h3',{})
             sr.reveal('.profil',{delay:400})
-            sr.reveal('.header .kontak',{interval:200})
+            sr.reveal('.header .kontak',{interval:300})
             sr.reveal('.konten1 img',{})
             sr.reveal('.konten1 p',{delay:200})
             sr.reveal('.konten1 table',{delay:200})
             sr.reveal('.konten1 .btn',{delay:400})
-            sr.reveal('.timeline li',{interval:200})
+            sr.reveal('.timeline li',{interval:300})
             sr.reveal('.konten2 h5',{})
             sr.reveal('.konten2 .box',{interval:200})
             sr.reveal('.award',{})

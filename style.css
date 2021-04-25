@@ -7,38 +7,52 @@
 html, body {
     font-size:10px; margin:0 0 auto !important;
 }
-#btntop{
-    display:none; position:fixed; bottom:1.5rem; right:1.5rem; z-index:99; border:.2rem solid transparent; border-radius:.5rem; background-color:rgb(100,128,186); 
-    padding:.35rem 1.05rem !important; color:white; box-shadow:.2rem .4rem .9rem rgba(100,128,186,0.5); transition:.2s all;
+body {
+    position:relative !important;
 }
-#btntop:hover, #btntop:focus {
+.btntop{
+    display:none; position:fixed; bottom:1.4rem; right:1.4rem; z-index:100; border:.2rem solid transparent; border-radius:.8rem; color:white;  
+    background-color:rgb(100,128,186); padding:.4rem 1rem !important; box-shadow:.2rem .4rem .9rem rgba(100,128,186,0.5); transition:.2s all;
+}
+.btntop:hover, .btntop:focus {
     background-color:white; border:.2rem solid rgb(100,128,186); color:rgb(100,128,186); box-shadow:none; outline:none; transition:.2s all;
 }
 
+/* --NAVBAR-- */
 .navbar {
-    background-color:white; padding:2.1rem; z-index:100 !important; transition:.2s all;
+    background-color:white; padding:1.4rem; z-index:100 !important; transition:.2s all;
 }
 .navbar.fixed {
-    background-color:rgb(100,128,186); box-shadow:0rem 1rem 1.2rem rgba(90,117,172,0.4); transition:.2s all;
+    background-color:rgb(100,128,186); box-shadow:0rem 1rem 1.1rem rgba(90,117,172,0.4); transition:.2s all;
 }
-.navbar li a {
-    border-bottom:.2rem solid transparent; color:rgb(100,128,186); font:500 1.6rem 'GothamRounded'; letter-spacing:.05rem; margin-right:2.8rem; transition:.2s all; 
+.nav-item {
+    padding:.8rem 2rem; margin-right:.4rem; border-radius:2.4rem; transition:.2s all; 
 }
-.navbar.fixed li a {
-    color:white; border-bottom:.2rem solid transparent;
+.nav-link {
+    color:rgb(100,128,186); font:500 1.6rem 'GothamRounded'; letter-spacing:.06rem; text-decoration:none; text-align:center;
 }
-li a:hover {
-    border-bottom:.2rem solid rgb(100,128,186); transition:.2s all;
+.navbar.fixed .nav-link, .award h2, .konten5 h2, .konten5 h5, .form-control::placeholder {
+    color:white;
 }
-.navbar.fixed li a:hover { 
-    border-bottom:.2rem solid white; transition:.2s all;
+.nav-item:hover, .active {
+    background-color:rgb(100,128,186); transition:.2s all;
 }
-.toggler, .toggler2, .navbar .icon-bar {
+.nav-item:hover .nav-link, .active .nav-link {
+    color:white; transition:.2s all;
+}
+.navbar.fixed .nav-item:hover, .navbar.fixed .active { 
+    background-color:white; transition:.2s all;
+}
+.navbar.fixed .nav-item:hover .nav-link, .navbar.fixed .active .nav-link {
+    color:rgb(100,128,186) !important; transition:.2s all;
+}
+.toggler, .toggler2, .icon-bar {
      display:none;
 }
 
+/* --HEADER-- */
 .header, .konten1, .konten2, .konten3, .konten4, .konten5 {
-    border-radius:0; background-color:white; background-size:cover; padding-top:8.5rem;
+    border-radius:0; background-color:white; background-size:cover; padding-top:8.6rem;
 }
 .profil {
     width:100%; float:right;
@@ -47,7 +61,7 @@ li a:hover {
     margin-top:30%;
 }
 .header h3 {
-    margin-top:-1rem; margin-bottom:-.5rem;
+    margin-top:-1rem; margin-bottom:-.6rem;
 }
 .kontak {
     width:4rem; height:4rem; margin:0rem .2rem; border-radius:50%; box-shadow:.2rem .4rem .9rem rgba(90,117,172,0.4); background-color:rgb(100,128,186); transition:.2s all;
@@ -68,27 +82,35 @@ a:nth-child(8) .kontak:hover {
     background-color:rgb(33,31,31); box-shadow:none; transition:.2s all;
 }
 
+/* --ABOUT-- */
 table tr td {
-    font:normal 1.6rem/2.4rem 'GothamRoundedLight'; color:rgb(18,18,18); letter-spacing:.05rem;
+    font:normal 1.6rem/2.4rem 'GothamRoundedLight'; color:rgb(18,18,18); letter-spacing:.06rem;
 }
-.btn {
-    background-color:rgb(100,128,186); border:.2rem solid transparent; padding:1.4rem 2rem; font:normal 1.6rem 'GothamRounded'; border-radius:3.5rem; 
-    color:white; box-shadow:.2rem .4rem .9rem rgba(90,117,172,0.4); transition:.2s all;
+.btndownload {
+    background-color:rgb(100,128,186); border:.2rem solid transparent; padding:1.4rem 2rem; 
+    border-radius:3.4rem; box-shadow:.2rem .4rem .9rem rgba(90,117,172,0.4); transition:.2s all;
 }
-.btn:hover, .btn:focus {
-    outline:none !important; background-color:transparent; border:.2rem solid rgb(100,128,186); box-shadow:none; color:rgb(100,128,186) !important; transition:.2s all;
+.btndownload a {
+    font:normal 1.6rem 'GothamRounded'; color:white; text-decoration:none;
+}
+.btndownload:hover, .btndownload:focus {
+    outline:none !important; background-color:transparent; border:.2rem solid rgb(100,128,186); box-shadow:none;  transition:.2s all;
+}
+.btndownload:hover a, .btndownload:focus a {
+    color:rgb(100,128,186);
 }
 .konten1 img {
     width:100%;
 }
-.konten1 a {
+.konten1 a, .konten4 a {
     text-decoration:none;
 }
 
+/* --EDUCATION & SKILLS-- */
 .timeline {
-    position:relative; margin:3rem auto; padding:2rem 0;
+    position:relative; margin:4rem auto; padding:2rem 0;
 }
-.timeline:before {
+.timeline::before {
     content:''; position:absolute; left:50%; width:.2rem; height:85%; background:rgb(18,18,18);
 }
 .timeline ul {
@@ -107,10 +129,10 @@ table tr td {
     padding-bottom:2rem;
 }
 .timeline ul li:nth-child(odd):before {
-    content:''; position:absolute; top:2.4rem; right:-0.6rem; width:1rem; height:1rem; background:rgb(18,18,18); border-radius:50%; box-shadow:0 0 0 .3rem rgba(156,156,156,0.2)
+    content:''; position:absolute; top:2.4rem; right:-0.6rem; width:1rem; height:1rem; background:rgb(18,18,18); border-radius:50%; box-shadow:0 0 0 .4rem rgba(156,156,156,0.2)
 }
 .timeline ul li:nth-child(even):before {
-    content:''; position:absolute; top:2.4rem; left:-0.6rem; width:1rem; height:1rem; background:rgb(18,18,18); border-radius:50%; box-shadow:0 0 0 .3rem rgba(156,156,156,0.2)
+    content:''; position:absolute; top:2.4rem; left:-0.4rem; width:1rem; height:1rem; background:rgb(18,18,18); border-radius:50%; box-shadow:0 0 0 .4rem rgba(156,156,156,0.2)
 }
 .timeline ul li h5 {
     margin:0; padding:0;
@@ -120,25 +142,22 @@ table tr td {
 }
 .timeline ul li:nth-child(odd) .time, .timeline ul li:nth-child(even) .time {
     position:absolute; top:1.2rem; margin:0; padding:.8rem 1.6rem; background-color:rgb(100,128,186); 
-    color:white !important; box-shadow:0 0 0 .3rem rgba(156,156,156,0.4);
+    color:white !important; box-shadow:0 0 0 .4rem rgba(156,156,156,0.4);
 } 
 .timeline ul li:nth-child(odd) .time {
-    right:-16.5rem; border-radius:0rem 2.5rem 2.5rem 0rem;
+    right:-16.5rem; border-radius:0rem 2.4rem 2.4rem 0rem;
 }
 .timeline ul li:nth-child(even) .time {
-    left:-16.5rem; border-radius:2.5rem 0rem 0rem 2.5rem;
-}
-.talent {
-    padding:1.5rem;
+    left:-16.5rem; border-radius:2.4rem 0rem 0rem 2.4rem;
 }
 .box {
-    width:100%; background-color:rgb(230,230,230); border-radius:.5rem !important;
+    width:100%; background-color:rgb(230,230,230); border-radius:.4rem !important;
 }
 .skill {
-    color:white; margin-bottom:1.2rem; border-radius:.5rem;
+    color:white; margin-bottom:1.2rem; border-radius:.4rem;
 }
 .ket {
-    padding-left:1rem; padding-top:.6rem; padding-bottom:.6rem; border-radius:.5rem 0rem 0rem .5rem;
+    padding-left:1rem; padding-top:.6rem; padding-bottom:.6rem; border-radius:.4rem 0rem 0rem .4rem;
 }
 .html {width: 90%; background-color: rgb(233,104,21);}
 .php {width: 75%; background-color: rgb(100,130,221);}
@@ -148,63 +167,65 @@ table tr td {
 .ps {width: 80%; background-color: rgb(14,157,210);}
 .ae {width: 70%; background-color: rgb(134,29,93);}
 
-.award h2, .konten5 h2, .konten5 h5 {
-    color:white;
-}
+/* --AWARD & EXPERIENCE-- */
 .award {
-    padding:3rem; background-color:rgb(100,128,186); border-radius:4rem; border:none; box-shadow:0 0 0 .3rem rgba(156,156,156,0.4);
+    padding:3.8rem; background-color:rgb(100,128,186); border-radius:2.8rem; border:none; box-shadow:0 0 0 .4rem rgba(156,156,156,0.4);
 }
 .award ul li {
-    font:normal 1.6rem/2.4rem 'GothamRoundedLight'; color:white; letter-spacing:.05rem; margin-left:-2rem;
+    font:normal 1.6rem/2.4rem 'GothamRoundedLight'; color:white; letter-spacing:.06rem; margin-left:-2rem;
 }
 
+/* --PORTFOLIO-- */
 .konten4 .card {
-    border-radius:2rem; margin-bottom:3.5rem; transition:.2s all;
-}
-.konten4 .card:hover {
-    box-shadow:.5rem .9rem 4.6rem rgb(235,235,235); border:.1rem solid transparent; transition:.2s all;
+    border:none; box-shadow:.5rem .9rem 4.6rem rgb(235,235,235); border-radius:1.2rem; margin-bottom:3.4rem; transition:.2s all;
 }
 .card-img-top {
-    border-radius: 2rem 2rem 0rem 0rem;
+    border-radius:1.2rem 1.2rem 0rem 0rem;
 }
-.konten4 a {
-    text-decoration:none;
-}
-.konten4 .card h4 {
+.konten4 .card h4 a {
     color:rgb(18,18,18); transition:.2s all;
 }
-.konten4 .card h4:hover {
+.konten4 .card h4 a:hover {
     color:rgb(100,128,186); transition:.2s all;
 }
 
+/* --CONTACT-- */
 .konten5 {
     background-color:rgb(100,128,186);
 }
 .form-control {
-    margin-bottom:2.5rem; border-radius:1.1rem; outline:none; border:none; height:5rem; font:normal 1.6rem 'GothamRoundedLight';
+    margin-bottom:2.6rem; border-radius:1rem; outline:none !important; border:.2rem solid white; height:4.8rem; font:normal 1.6rem 'GothamRoundedLight'; 
+    background-color:transparent; color:white !important;
 }
 textarea {
     padding:1rem !important;
 }
+.form-control:focus {
+    border-radius:1rem; outline:none !important; border:.2rem solid white;
+    background-color:transparent; color:white !important;
+}
 .btnsubmit {
-    background-color:transparent; border:.2rem solid white; padding:1.2rem 2.2rem; font:normal 1.6rem 'GothamRounded'; border-radius:3.5rem; color:white; transition:.2s all;
+    background-color:white; border:.2rem solid white; padding:1.2rem 2.2rem; font:normal 1.6rem 'GothamRounded'; 
+    border-radius:3.4rem; color:rgb(100,128,186); transition:.2s all;
 }
 .btnsubmit:hover, .btnsubmit:focus {
-    outline:none !important; background-color:white; color:rgb(100,128,186); transition:.2s all;
+    outline:none !important; background-color:transparent; color:white; transition:.2s all;
 }
 
+/* --FOOTER-- */
 .page-footer{
-    width:100%; background-color:rgb(100,128,186); padding:1.5rem 0rem; margin-top:-2rem;
+    width:100%; background-color:rgb(100,128,186); padding:1.6rem 0rem; margin-top:-2rem;
 }
 .page-footer h5 {
     font-weight:lighter; text-align:center; line-height:2.8rem; color:white;
 }
 
+/* --FONT & TYPOGRAPHY-- */
 h1 {
     font:normal 5rem/7.5rem 'GothamRounded'; color:rgb(18,18,18); 
 }
 h2 {
-    font:normal 3.2rem/4.8rem 'GothamRounded'; text-align:center; margin-bottom:3rem; color:rgb(100,128,186);
+    font:normal 3.2rem/4.8rem 'GothamRounded'; text-align:center; margin-bottom:3.2rem; color:rgb(100,128,186);
 }
 h3 {
     font:normal 2.5rem/3.75rem 'GothamRounded'; color:rgb(18,18,18); 
@@ -213,10 +234,10 @@ h4 {
     font:normal 2rem/3rem 'GothamRounded'; color:white;
 }
 h5, p {
-    font:normal 1.6rem/2.4rem 'GothamRoundedLight'; color:rgb(18,18,18); letter-spacing:.05rem;
+    font:normal 1.6rem/2.4rem 'GothamRoundedLight'; color:rgb(18,18,18); letter-spacing:.06rem;
 }
 h6 {
-    font:normal 1rem/1.5rem 'GothamRoundedLight'; color:rgb(18,18,18); letter-spacing:.05rem; text-align:center;
+    font:normal 1rem/1.5rem 'GothamRoundedLight'; color:rgb(18,18,18); letter-spacing:.06rem; text-align:center;
 }
 strong {
     color:rgb(100,128,186); font-weight:lighter;
@@ -225,8 +246,20 @@ hr {
     margin-bottom:1rem; width:100%; float:left; background-color:rgb(18,18,18); height:.2rem;
 }
 @media screen and (max-width: 1023px) {
+    .navbar {
+        padding:1.4rem;
+    }
+    .navbar.fixed {
+        background-color:rgb(100,128,186); box-shadow:0rem 1rem 1.1rem rgba(90,117,172,0.4); transition:.2s all;
+    }
+    .nav-item {
+        padding:.8rem 2rem; margin-top:.8rem;
+    }
+    .nav-link {
+        text-align:left;
+    }
     .toggler, .toggler2 {
-        outline:none; border:none; background-color:transparent;
+        outline:none; border:none; background-color:transparent; padding-left:1.5rem !important;
     }
     .toggler {
         display:block;
@@ -234,14 +267,11 @@ hr {
     .toggler:focus, .toggler2:focus {
         outline:none !important; 
     }
-    .navbar .icon-bar {
+    .icon-bar {
         width:3rem; height:.3rem; background-color:rgb(100,128,186); display:block; transition:.2s all; margin:.4rem 0rem; 
     }
     .navbar.fixed .icon-bar {
         background-color:white; transition:.2s all;
-    }
-    .toggler, .toggler2 {
-        padding-left:1.5rem !important;
     }
     .toggler2 .top-bar{
         transform:rotate(-28deg); 
@@ -254,9 +284,6 @@ hr {
     }
     .navbar-collapse {
         padding:1.5rem 1.5rem !important;
-    }
-    .navbar li {
-        padding:.5rem 0rem; width:auto;
     }
     .header h1 {
         margin-top:10%;
@@ -291,10 +318,10 @@ hr {
 }
 @media screen and (max-width: 767px) {
     .toggler, .toggler2 {
-        padding-left:.5rem !important;
+        padding-left:1rem !important;
     }
     .navbar-collapse {
-        padding:1.5rem .5rem !important;
+        padding:1.4rem 1rem !important;
     }
     .header h3 {
         margin-top:1rem; margin-bottom:-0.5rem;
