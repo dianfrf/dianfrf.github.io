@@ -169,7 +169,7 @@ table tr td {
 
 /* --AWARD & EXPERIENCE-- */
 .award {
-    padding:3.8rem; background-color:rgb(100,128,186); border-radius:2.8rem; border:none; box-shadow:0 0 0 .4rem rgba(156,156,156,0.4);
+    padding:3.8rem; background-color:rgb(100,128,186); border-radius:2.8rem; border:none;
 }
 .award ul li {
     font:normal 1.6rem/2.4rem 'GothamRoundedLight'; color:white; letter-spacing:.06rem; margin-left:-2rem;
